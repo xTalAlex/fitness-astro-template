@@ -4,14 +4,17 @@ const offers = [
   {
     imageURL: "poker1.jpg",
     offerText: "Tornei",
+    offerDescription: "",
   },
   {
     imageURL: "poker2.jpg",
     offerText: "Eventi",
+    offerDescription: "Qui si può mettere del testo",
   },
   {
     imageURL: "poker3.jpg",
     offerText: "Shop",
+    offerDescription: "",
   },
 ];
 ---
@@ -24,7 +27,11 @@ const offers = [
   <div class="grid grid-cols-1 md:grid-cols-3">
     {
       offers.map((offer) => (
-        <ImageCard imageURL={offer.imageURL} text={offer.offerText} />
+        <ImageCard
+          imageURL={offer.imageURL}
+          text={offer.offerText}
+          description={offer.offerDescription}
+        />
       ))
     }
   </div>

@@ -1,9 +1,10 @@
 ---
 interface Props {
   text: string;
+  description?: string;
   imageURL: string;
 }
-const { text = "", imageURL = "" } = Astro.props;
+const { text = "", description = "", imageURL = "" } = Astro.props;
 const imageStyle = {
   backgroundImage: `url(/images/${imageURL})`,
 };
@@ -14,4 +15,5 @@ const imageStyle = {
   style={imageStyle}
 >
   <h2 class="text-white uppercase text-4xl italic">{text}</h2>
+  <p class="text-white text-xl">{description}</p>
 </div>
